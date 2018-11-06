@@ -1,1 +1,9 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<!-- we need a div that will act as an overlay for several seconds after the platform is ready.-->
+<div *ngIf="showSplash" class="splash">
+    <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</div>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
